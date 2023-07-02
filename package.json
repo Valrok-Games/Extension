@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Valrok-Games/PlayerPrefs.git",
+    "url": "https://github.com/Valrok-Games/Extension.git",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
