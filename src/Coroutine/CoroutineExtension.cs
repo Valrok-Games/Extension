@@ -1,8 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+#nullable enable
 namespace Valrok.Extension.Coroutine
 {
     public static class CoroutineExtension
@@ -13,7 +13,7 @@ namespace Valrok.Extension.Coroutine
         /// <param name="time"></param>
         /// <param name="action"></param>
         /// <returns></returns>
-        public static IEnumerator ExecuteInTime(WaitForSeconds time, System.Action action = null)
+        public static IEnumerator ExecuteInTime(WaitForSeconds time, System.Action? action = null)
         {
             yield return time;
             action?.Invoke();
@@ -26,7 +26,7 @@ namespace Valrok.Extension.Coroutine
         /// <param name="updateInterval"></param>
         /// <param name="action"></param>
         /// <returns></returns>
-        public static IEnumerator FadeIn(Image image, WaitForSeconds updateInterval, float alphaUpdateValue = 0.02f, System.Action action = null)
+        public static IEnumerator FadeIn(Image image, WaitForSeconds updateInterval, float alphaUpdateValue = 0.02f, System.Action? action = null)
         {
             float alphaVal = image.color.a;
             Color tmp = image.color;
@@ -50,7 +50,7 @@ namespace Valrok.Extension.Coroutine
         /// <param name="updateInterval"></param>
         /// <param name="action"></param>
         /// <returns></returns>
-        public static IEnumerator FadeOut(Image image, WaitForSeconds updateInterval, float alphaUpdateValue = 0.02f, System.Action action = null)
+        public static IEnumerator FadeOut(Image image, WaitForSeconds updateInterval, float alphaUpdateValue = 0.02f, System.Action? action = null)
         {
             float alphaVal = image.color.a;
             Color tmp = image.color;
